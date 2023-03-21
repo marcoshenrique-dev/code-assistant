@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: #282A36;
+}
+
+* {
+  font-family: 'JetBrains Mono', monospace;
+}
