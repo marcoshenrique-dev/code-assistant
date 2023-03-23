@@ -11,7 +11,7 @@ let mainWindow;
 
 function createWindow() {
     // Criar a janela do browser.
-    mainWindow = new BrowserWindow({width: 800, height: 600});
+    mainWindow = new BrowserWindow({width: 1000, height: 800});
 
     // e carregar o index.html da aplicação.
     mainWindow.loadURL('http://localhost:5173');
