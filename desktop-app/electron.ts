@@ -16,9 +16,6 @@ function createWindow() {
     // e carregar o index.html da aplicação.
     mainWindow.loadURL('http://localhost:5173');
 
-    // Abrir o DevTools.
-    mainWindow.webContents.openDevTools();
-
     // Emitido quando a janela é fechada.
     mainWindow.on('closed', function () {
         // Desreferenciar o objeto da janela, geralmente irás armazenar as janelas
