@@ -7,6 +7,7 @@ import {Empty, Loader} from './components';
 import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
 
 import api from './services/api';
+import { removeAccent } from './utils';
 
 function App() {
 
@@ -33,7 +34,6 @@ function App() {
       language: 'pt-BR'
     });
   }
-  
 
   const stopHandle = () => {
     setMicEnable(false);
@@ -41,6 +41,7 @@ function App() {
     microphoneRef.current.classList.remove("listening");
     SpeechRecognition.stopListening();
   };
+
   const handleReset = () => {
     stopHandle();
     resetTranscript();
@@ -57,9 +58,7 @@ function App() {
       }
   
     console.log(transcript);
-  }, [transcript]);
-
-  
+  }, [transcript]);  
 
   async function sendQuestion() {
 
@@ -69,10 +68,11 @@ function App() {
     }
 
     stopHandle();
-
     setLoading(true);
 
-    const {data} = await api.get(`/assistente?question=${pergunta}`);
+    const perguntaPTBR = pergunta + ' em portugues';
+
+    const {data} = await api.get(`/assistente?question=${removeAccent(perguntaPTBR)}`);
     const resultText = data.response;
 
     setResposta(resultText);
@@ -87,7 +87,6 @@ function App() {
   }
 
   useEffect(() => {
-
     function handlePress(event: any) {
    
         if (event.key === ' ') {

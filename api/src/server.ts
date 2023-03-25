@@ -14,6 +14,7 @@ import {Assistant, EHumor, EModel, memoryRepository} from '@whitebeardit/easy-op
 const {ChatRepository, MessageRepository} = memoryRepository;
 const chatRepository = new ChatRepository();
 const messageRepository = new MessageRepository();
+
 const assistente =  new Assistant(chatRepository, messageRepository, {
     humor: EHumor.SARCASTIC,
     name: 'Assistente',
@@ -33,6 +34,7 @@ router.get('/assistente', async (request, response) => {
 
   
   const {question} = request.query;
+  
   assistente.addMessage({
       chatId: 'myId',
       //@ts-ignore
@@ -53,5 +55,5 @@ router.get('/assistente', async (request, response) => {
 app.use('/', router);
 
 app.listen(3000, () => {
-  console.log('servidor rodando na porta 3.000');
+  console.log('servidor rodando na porta 3000');
 });
