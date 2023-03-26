@@ -1,4 +1,4 @@
-# CODE ASSISTENT
+# 💻 CODE ASSISTENT
 
 ---
 
@@ -22,13 +22,13 @@ Furthermore in the front-end environment was used Electron for desktop interface
 
 - Baixe o projeto na sua máquina / Clone the repository in your machine
 
-```jsx
+```bash
 git clone https://github.com/marcoshenrique-dev/code-assistent.git
 ```
 
 - Instale as dependências em ambos os ambientes / Install the dependencies in both environments
 
-```jsx
+```bash
 // install on server with yarn
 cd ./api && yarn
 // install on server with npm
@@ -43,7 +43,7 @@ cd ./desktop-app && npm install
 
 - Agora bastar rodar o servidor e o projeto react / Now just run the server and react project
 
-```jsx
+```bash
 // to server
 yarn start
 
