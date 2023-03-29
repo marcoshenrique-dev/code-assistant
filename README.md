@@ -1,4 +1,4 @@
-# 💻 CODE ASSISTENT
+# 💻 CODE ASSISTANT
 
 ---
 
@@ -23,7 +23,7 @@ Furthermore in the front-end environment was used Electron for desktop interface
 - Baixe o projeto na sua máquina / Clone the repository in your machine
 
 ```bash
-git clone https://github.com/marcoshenrique-dev/code-assistent.git
+git clone https://github.com/marcoshenrique-dev/code-assistant.git
 ```
 
 - Instale as dependências em ambos os ambientes / Install the dependencies in both environments
